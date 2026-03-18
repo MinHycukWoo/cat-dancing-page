@@ -1,0 +1,63 @@
+/* ===== 바운스 댄스 ===== */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  20%       { transform: translateY(-30px) rotate(-8deg) scale(1.05); }
+  40%       { transform: translateY(-50px) rotate(8deg) scale(1.1); }
+  60%       { transform: translateY(-25px) rotate(-5deg) scale(1.05); }
+  80%       { transform: translateY(-10px) rotate(5deg) scale(1.02); }
+}
+
+/* ===== 스핀 댄스 ===== */
+@keyframes spin {
+  0%   { transform: rotate(0deg) scale(1); }
+  25%  { transform: rotate(90deg) scale(1.15) translateY(-10px); }
+  50%  { transform: rotate(180deg) scale(1); }
+  75%  { transform: rotate(270deg) scale(1.15) translateY(-10px); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* ===== 웨이브 댄스 ===== */
+@keyframes wave {
+  0%   { transform: translateX(0) translateY(0) rotate(0deg); }
+  15%  { transform: translateX(-20px) translateY(-15px) rotate(-10deg); }
+  30%  { transform: translateX(20px) translateY(-25px) rotate(10deg); }
+  45%  { transform: translateX(-15px) translateY(-10px) rotate(-7deg); }
+  60%  { transform: translateX(15px) translateY(-20px) rotate(7deg); }
+  75%  { transform: translateX(-10px) translateY(-5px) rotate(-5deg); }
+  90%  { transform: translateX(10px) translateY(-15px) rotate(5deg); }
+  100% { transform: translateX(0) translateY(0) rotate(0deg); }
+}
+
+/* ===== 디스코 댄스 ===== */
+@keyframes disco {
+  0%   { transform: translateY(0) scaleX(1) rotate(0deg); filter: hue-rotate(0deg); }
+  10%  { transform: translateY(-20px) scaleX(1.1) rotate(15deg); filter: hue-rotate(45deg); }
+  20%  { transform: translateY(0) scaleX(0.9) rotate(-15deg); filter: hue-rotate(90deg); }
+  30%  { transform: translateY(-30px) scaleX(1.15) rotate(20deg); filter: hue-rotate(135deg); }
+  40%  { transform: translateY(0) scaleX(0.95) rotate(-20deg); filter: hue-rotate(180deg); }
+  50%  { transform: translateY(-15px) scaleX(1.05) rotate(10deg); filter: hue-rotate(225deg); }
+  60%  { transform: translateY(0) scaleX(1) rotate(-10deg); filter: hue-rotate(270deg); }
+  70%  { transform: translateY(-25px) scaleX(1.1) rotate(15deg); filter: hue-rotate(315deg); }
+  80%  { transform: translateY(0) scaleX(0.9) rotate(-15deg); filter: hue-rotate(340deg); }
+  90%  { transform: translateY(-10px) scaleX(1.05) rotate(5deg); filter: hue-rotate(360deg); }
+  100% { transform: translateY(0) scaleX(1) rotate(0deg); filter: hue-rotate(0deg); }
+}
+
+/* ===== 그림자 ===== */
+@keyframes shadow-pulse {
+  0%, 100% { transform: scaleX(1);   opacity: 0.4; }
+  40%       { transform: scaleX(0.6); opacity: 0.2; }
+}
+
+/* ===== 파티클 ===== */
+@keyframes float-up {
+  0%   { transform: translateY(0) rotate(0deg);    opacity: 1; }
+  100% { transform: translateY(-120px) rotate(360deg); opacity: 0; }
+}
+
+/* ===== 배경 그라디언트 이동 ===== */
+@keyframes bg-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

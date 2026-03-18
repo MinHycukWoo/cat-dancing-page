@@ -1,0 +1,104 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ---- 재생/정지 버튼 ---- */
+.btn-play {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  will-change: transform;
+}
+
+.btn-play.playing {
+  background: linear-gradient(135deg, #ff6b9d, #c44dff);
+  color: white;
+  box-shadow: 0 6px 20px rgba(255, 107, 157, 0.5);
+}
+
+.btn-play.paused {
+  background: linear-gradient(135deg, #4ecdc4, #44cf6c);
+  color: white;
+  box-shadow: 0 6px 20px rgba(78, 205, 196, 0.5);
+}
+
+.btn-play:hover  { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.3); }
+.btn-play:active { transform: translateY(0); }
+
+.btn-icon  { font-size: 1.3rem; }
+.btn-label { letter-spacing: 0.05em; }
+
+/* ---- 공통 그룹 ---- */
+.control-group { width: 100%; text-align: center; }
+
+.control-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted, #aaa);
+  margin-bottom: 10px;
+}
+
+/* ---- 모드 버튼 ---- */
+.mode-buttons,
+.speed-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-mode,
+.btn-speed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-light, #eee);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-speed { flex-direction: row; padding: 10px 20px; }
+
+.btn-mode:hover,
+.btn-speed:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-mode.active {
+  background: linear-gradient(135deg, rgba(255,107,157,0.3), rgba(196,77,255,0.3));
+  border-color: #ff6b9d;
+  color: #ff6b9d;
+}
+
+.btn-speed.active {
+  background: linear-gradient(135deg, rgba(255,204,2,0.3), rgba(255,107,157,0.3));
+  border-color: var(--accent, #ffcc02);
+  color: var(--accent, #ffcc02);
+}

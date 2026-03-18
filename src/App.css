@@ -1,0 +1,118 @@
+/* ======================================
+   App Layout — 반응형 포함
+====================================== */
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background-size: 400% 400%;
+  animation: bg-shift 12s ease infinite;
+}
+
+/* ---- 배경 오브 ---- */
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+.orb1 {
+  width: 400px; height: 400px;
+  background: rgba(255, 107, 157, 0.18);
+  top: -100px; left: -100px;
+}
+.orb2 {
+  width: 350px; height: 350px;
+  background: rgba(196, 77, 255, 0.18);
+  bottom: -80px; right: -80px;
+}
+.orb3 {
+  width: 250px; height: 250px;
+  background: rgba(255, 204, 2, 0.1);
+  top: 40%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ---- 헤더 ---- */
+.app-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 40px 20px 10px;
+}
+
+.title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #ff6b9d, #c44dff, #ffcc02);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.title-icon {
+  -webkit-text-fill-color: initial;
+  font-size: 0.8em;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  letter-spacing: 0.05em;
+}
+
+/* ---- 메인 ---- */
+.app-main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 10px 20px 32px;
+  width: 100%;
+  max-width: 500px;
+  flex: 1;
+}
+
+/* ---- 푸터 ---- */
+.app-footer {
+  position: relative;
+  z-index: 1;
+  padding: 16px 20px 28px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ======================================
+   반응형 — 태블릿 (768px 이하)
+====================================== */
+@media (max-width: 768px) {
+  .app-header { padding: 28px 16px 6px; }
+  .app-main   { gap: 20px; padding: 8px 16px 24px; }
+}
+
+/* ======================================
+   반응형 — 모바일 (480px 이하)
+====================================== */
+@media (max-width: 480px) {
+  .app-header { padding: 20px 12px 4px; }
+  .app-main   { gap: 16px; padding: 4px 12px 20px; max-width: 100%; }
+
+  .orb1 { width: 250px; height: 250px; }
+  .orb2 { width: 200px; height: 200px; }
+  .orb3 { width: 150px; height: 150px; }
+}
